@@ -76,36 +76,4 @@ variable "create_vpc" {
   description = "create vpc"
 }
 
-variable "component_name" {
-  default = "kojitechs"
-}
 
-variable "http_port" {
-  description = "http from everywhere"
-  type        = number
-  default     = 80
-}
-
-
-variable "https_port" {
-  description = "https from everywhere"
-  type        = number
-  default     = 8080
-}
-
-
-variable "register_dns" {
-  default = "kojitechs.com"
-}
-variable "dns_name" {
-  type    = string
-  default = "kojitechs.com"
-}
-
-variable "subject_alternative_names" {
-  type = map(string)
-  default = {
-    default = "*.kojitechs.com"
-    sbx     = "*.kelderanyi.com"
-  }
-}
